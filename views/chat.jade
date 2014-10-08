@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 chat!chat!chat!
+  div Your nickname: 
+    var#username #{userdata.name}
+  input#message(type='text')
+  button#send Send
+  div#chat-area
+
+block include_js
+  script(src='/socket.io/socket.io.js')
+  script(src='/javascripts/client.js')
+  // to refer an object wrapped in response
+  script(type='text/javascript') var local_data =!{JSON.stringify(userdata)}

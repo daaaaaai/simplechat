@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  p Input your nickname
+  form(method="POST" action="/chat")
+    input#username(type="text" name="username")
+    button#login(type=submit) send
